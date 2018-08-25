@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/ed_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/spacing_10dp"
+            android:hint="@string/hint_text"
+            android:textColor="@android:color/black"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_auto_size"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_50dp"
+            android:layout_below="@+id/ed_content"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:hint="@string/hint_default_size"
+            android:textColor="@android:color/black"
+            app:autoSizeMaxTextSize="@dimen/font_size_60sp"
+            app:autoSizeMinTextSize="@dimen/font_size_12sp"
+            app:autoSizeStepGranularity="@dimen/font_size_4sp"
+            app:autoSizeTextType="uniform"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_auto_preset_size"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_50dp"
+            android:layout_below="@+id/tv_auto_size"
+            android:layout_marginTop="@dimen/spacing_10dp"
+            android:hint="@string/hint_preset_size"
+            android:textColor="@android:color/holo_blue_dark"
+            app:autoSizePresetSizes="@array/autosize_text_sizes"
+            app:autoSizeTextType="uniform"/>
+
+    </RelativeLayout>
+</ScrollView>
